@@ -7,6 +7,22 @@
     <title>Hello World</title> <!--Be careful, the widget's title, as specified in the title tag, is overwritten by the name of the Third Party App-->
     <meta name="description" content="A widget to welcome the world"/>
     <meta name="author" content="Alexander Turnbull"/>
+     <!-- Application Preferences -->
+    <widget:preferences>
+        <widget:preference name="my_text" type="text" label="My text pref" defaultValue=""></widget:preference>
+        <widget:preference name="my_password" type="password" label="My password pref" defaultValue=""></widget:preference>
+        <widget:preference name="my_checkbox" type="boolean" label="My checkbox pref" defaultValue=""></widget:preference>
+        <widget:preference name="my_hidden" type="hidden" label="" defaultValue=""></widget:preference>
+        <widget:preference name="my_range" type="range" label="My range pref" defaultValue="10" step="5" min="5" max="15"></widget:preference>
+        <widget:preference name="my_list" type="list" label="My list" defaultValue="Value1">
+            <widget:option label="Label1" value="Value1"></widget:option>
+            <widget:option label="Label2" value="Value2"></widget:option>
+            <widget:option label="Label3" value="Value3"></widget:option>
+            <widget:option label="EmptyValue" value=""></widget:option>
+        </widget:preference>
+        <widget:preference name="my_empty_list" type="list" label="My Empty list" defaultValue="Value1">
+        </widget:preference>
+    </widget:preferences>
     <script >
             /* global widget */
             ( function () {
